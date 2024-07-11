@@ -29,7 +29,7 @@ class Post(models.Model):
     published_at= models.DateTimeField(blank=True, null=True)
     title= models.TextField(max_length=100)
     slug= models.SlugField()
-    summary= models.TextField(max_length=500)
+    summary= models.TextField(max_length=250)
     content= models.TextField
     tags= models.ManyToManyField(Tag, related_name="posts")
     comments= GenericRelation(Comment)
